@@ -1,4 +1,68 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.navbar-logo img {
+  margin-left: 2rem;
+  width: 30%
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.navbar-menu p,
+.navbar-menu span {
+  margin: 0 2rem;
+  color: white;
+  letter-spacing: .2rem;
+  font-weight: 700;
+}
+
+.navbar-menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 0;
+}
+
+.navbar-menu ul li{
+  padding: 1.5rem;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.cart-icon a{
+  margin: 0 2rem;
+  color: #FFF;
+}
+
+.navbar-menu li a:hover,
+.cart-icon a:hover {
+  opacity: 75%;
+}
+
+.item-list-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-list-container p{
+  font-size: 2rem;
+  font-weight: 500;
+}
