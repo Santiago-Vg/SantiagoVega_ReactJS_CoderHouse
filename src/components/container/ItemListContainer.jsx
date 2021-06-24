@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ItemList from "./itemList";
 
-function ItemListContainer( {greeting} ) {
-    return (
-        <div className="item-list-container">
-            <p>{greeting}</p>
-        </div>
-    )
+function ItemListContainer() {
+  return (
+    <div className="item-list-container row px-0 mx-0 my-5">
+      <ItemList />
+    </div>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
