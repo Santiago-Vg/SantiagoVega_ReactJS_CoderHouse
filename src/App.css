@@ -55,6 +55,15 @@ body {
   color: #fff;
 }
 
+.navbar #warn {
+  position: relative;
+  top: .5rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: red;
+}
+
 .item-list-container {
   display: flex;
   justify-content: center;
@@ -82,7 +91,7 @@ body {
   margin-top: 1.8em;
   margin-left: 2rem;
   width: .4rem;
-  height: 10.5em;
+  height: 12em;
   background-color: #626668d2;
 }
 
@@ -97,7 +106,8 @@ body {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: .02rem;
-  margin: 1.2em 0 1em 0;
+  margin: 0 0;
+  align-self: flex-start;
 }
 
 .item-list-container .card .desc {
@@ -111,18 +121,44 @@ body {
   content: "$";
   font-size: 1rem;
   font-weight: 700;
-  margin: 0 .3rem 2em .7rem;
+  margin: 0 .3rem 2em 0;
 }
 
-.item-list-container .card .btn {
-  background-color: #9ca2a6;
+.item-list-container .card .btn_amount {
+  background-color: #626668c9;
   color: #fff;
   border-radius: 30px;
   font-size: .75rem;
   margin: 2em 0;
-  padding: .5em 1.2rem;
+  padding: .5em 0;
+  justify-content: space-between;
   -webkit-box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
+}
+
+.item-list-container .card .btn_addToCart {
+  background-color: #9ca2a6;
+  color: #fff;
+  border-radius: 30px;
+  font-size: .75rem;
+  margin: 2em .5rem;
+  padding: .5em 1.5rem;
+  justify-content: space-between;
+  border: none;
+  -webkit-box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.item-list-container .card .btn_amount .btn_add,
+.item-list-container .card .btn_amount .btn_rem {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 0 1rem;
 }
 
 .footer {

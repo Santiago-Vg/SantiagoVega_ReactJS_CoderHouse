@@ -3,55 +3,63 @@
         "title": "gabinete midcent.",
         "description": "gabinete de madera de caoba importada de cuba.",
         "thumbnailUrl": "./img/producto1.png",
-        "price": 25000
+        "price": 25000,
+        "stock": 5
     },
     {
         "id": 2,
         "title": "silla soft poang.",
         "description": "silla al estilo escandinavo de madera curvada.",
         "thumbnailUrl": "./img/silla_poang.png",
-        "price": 18500
+        "price": 18500,
+        "stock": 5
     },
     {
         "id": 3,
         "title": "gabinete dunes.",
         "description": "gabinete de roble real liso importado de etiopía.",
         "thumbnailUrl": "./img/gabinete.png",
-        "price": 22000
+        "price": 22000,
+        "stock": 5
     },
     {
         "id": 4,
         "title": "sillón analyst.",
         "description": "sillón de madera oscura y almohadillas de cuero",
         "thumbnailUrl": "./img/silla_poang2.png",
-        "price": 19000
+        "price": 19000,
+        "stock": 5
     },
     {
         "id": 5,
         "title": "estantería locket.",
         "description": "estantería doble de hierro puro en color negro.",
         "thumbnailUrl": "./img/estanteria.png",
-        "price": 15400
+        "price": 15400,
+        "stock": 5
     },
     {
         "id": 6,
         "title": "lámpara unlight.",
         "description": "lámpara de estudio de diseño finlandés para techo.",
         "thumbnailUrl": "./img/lamp.png",
-        "price": 9000
+        "price": 9000,
+        "stock": 5
     },
     {
         "id": 7,
         "title": "sofá rue antoine.",
         "description": "sofá de salón de diseño clásico modernizado.",
         "thumbnailUrl": "./img/sofa.png",
-        "price": 35000
+        "price": 35000,
+        "stock": 5
     },
     {
         "id": 8,
         "title": "escritorio mold.",
         "description": "escritorio de madera y hierro para oficina o habitación.",
         "thumbnailUrl": "./img/desk.png",
-        "price": 14000
+        "price": 14000,
+        "stock": 5
     }
 ]
