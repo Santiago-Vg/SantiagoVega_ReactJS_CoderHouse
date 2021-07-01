@@ -10,15 +10,17 @@ const ItemListContainer = ({ view }) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     setTimeout(() => {
-      fetch("apiShort.json").then(async (response) => {
-        try {
-          const data = await response.json();
-          setProducts(data);
-        } catch (error) {
-          console.log("Error!");
-          console.error(error);
+      fetch("https://mocki.io/v1/189f9f70-9fbb-41f5-92a0-319105353673").then(
+        async (response) => {
+          try {
+            const data = await response.json();
+            setProducts(data);
+          } catch (error) {
+            console.log("Error!");
+            console.error(error);
+          }
         }
-      });
+      );
     }, 2500);
   }, []);
   return (

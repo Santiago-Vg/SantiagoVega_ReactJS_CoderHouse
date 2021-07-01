@@ -6,7 +6,7 @@ function footer({ copyright }) {
     <div className="footer">
       <p>©</p>
       <div className="footer_logo">buncits.</div>
-      <span>//</span>
+      <span> - </span>
       <p>{copyright}</p>
     </div>
   );

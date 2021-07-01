@@ -34,9 +34,9 @@ function navbar() {
           </Link>
 
           <li className="nav-item dropdown">
-            <a
+            <Link
+              to="/"
               className="nav-link dropdown-toggle"
-              href="#"
               id="navbarDropdownMenuLink"
               role="button"
               data-toggle="dropdown"
@@ -44,7 +44,7 @@ function navbar() {
               aria-expanded="false"
             >
               <span>|</span> productos
-            </a>
+            </Link>
             <div
               className="dropdown-menu"
               aria-labelledby="navbarDropdownMenuLink"

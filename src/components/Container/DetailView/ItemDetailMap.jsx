@@ -7,7 +7,7 @@ const ItemDetailMap = ({ allProducts }) => {
   let products = allProducts;
 
   return products.map((items) => {
-    return <ItemDetail data={items} />;
+    return <ItemDetail data={items} key={items.id} />;
   });
 };
 

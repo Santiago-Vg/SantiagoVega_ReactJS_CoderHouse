@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function cartWidget() {
   return (
     <div className="cart-icon">
-      <a href="#">
+      <Link to="/">
         <span id="warn"></span>
         <i className="fas fa-shopping-cart"></i>
-      </a>
+      </Link>
     </div>
   );
 }
