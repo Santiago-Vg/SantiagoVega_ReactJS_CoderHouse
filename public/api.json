@@ -1,6 +1,7 @@
 [{
         "id": 1,
         "title": "gabinete midcent.",
+        "category": "chair",
         "description": "gabinete de madera de caoba importada de cuba.",
         "thumbnailUrl": "./img/producto1.png",
         "price": 25000,
@@ -10,13 +11,16 @@
         "id": 2,
         "title": "silla soft poang.",
         "description": "silla al estilo escandinavo de madera curvada.",
+        "category": "chair",
         "thumbnailUrl": "./img/silla_poang.png",
+        "thumbnailUrl2": "./img/GO4.jpeg",
         "price": 18500,
         "stock": 5
     },
     {
         "id": 3,
         "title": "gabinete dunes.",
+        "category": "chair",
         "description": "gabinete de roble real liso importado de etiopía.",
         "thumbnailUrl": "./img/gabinete.png",
         "price": 22000,
@@ -25,6 +29,7 @@
     {
         "id": 4,
         "title": "sillón analyst.",
+        "category": "chair",
         "description": "sillón de madera oscura y almohadillas de cuero",
         "thumbnailUrl": "./img/silla_poang2.png",
         "price": 19000,
@@ -33,6 +38,7 @@
     {
         "id": 5,
         "title": "estantería locket.",
+        "category": "chair",
         "description": "estantería doble de hierro puro en color negro.",
         "thumbnailUrl": "./img/estanteria.png",
         "price": 15400,
@@ -41,6 +47,7 @@
     {
         "id": 6,
         "title": "lámpara unlight.",
+        "category": "chair",
         "description": "lámpara de estudio de diseño finlandés para techo.",
         "thumbnailUrl": "./img/lamp.png",
         "price": 9000,
@@ -49,6 +56,7 @@
     {
         "id": 7,
         "title": "sofá rue antoine.",
+        "category": "chair",
         "description": "sofá de salón de diseño clásico modernizado.",
         "thumbnailUrl": "./img/sofa.png",
         "price": 35000,
@@ -57,8 +65,118 @@
     {
         "id": 8,
         "title": "escritorio mold.",
+        "category": "chair",
         "description": "escritorio de madera y hierro para oficina o habitación.",
         "thumbnailUrl": "./img/desk.png",
+        "price": 14000,
+        "stock": 5
+    },
+
+    {
+        "id": 9,
+        "title": "estantería locket.",
+        "category": "chair",
+        "description": "estantería doble de hierro puro en color negro.",
+        "thumbnailUrl": "./img/gabinete3.png",
+        "price": 15400,
+        "stock": 5
+    },
+    {
+        "id": 10,
+        "title": "lámpara unlight.",
+        "category": "chair",
+        "description": "lámpara de estudio de diseño finlandés para techo.",
+        "thumbnailUrl": "./img/estanteria2.png",
+        "price": 9000,
+        "stock": 5
+    },
+    {
+        "id": 11,
+        "title": "sofá rue antoine.",
+        "category": "chair",
+        "description": "sofá de salón de diseño clásico modernizado.",
+        "thumbnailUrl": "./img/sofa3.png",
+        "price": 35000,
+        "stock": 5
+    },
+    {
+        "id": 12,
+        "title": "escritorio mold.",
+        "category": "chair",
+        "description": "escritorio de madera y hierro para oficina o habitación.",
+        "thumbnailUrl": "./img/silla3.png",
+        "price": 14000,
+        "stock": 5
+    },
+    {
+        "id": 13,
+        "title": "estantería locket.",
+        "category": "chair",
+        "description": "estantería doble de hierro puro en color negro.",
+        "thumbnailUrl": "./img/silla4.png",
+        "price": 15400,
+        "stock": 5
+    },
+    {
+        "id": 14,
+        "title": "lámpara unlight.",
+        "category": "chair",
+        "description": "lámpara de estudio de diseño finlandés para techo.",
+        "thumbnailUrl": "./img/lampara3.png",
+        "price": 9000,
+        "stock": 5
+    },
+    {
+        "id": 15,
+        "title": "sofá rue antoine.",
+        "category": "chair",
+        "description": "sofá de salón de diseño clásico modernizado.",
+        "thumbnailUrl": "./img/estanteria3.png",
+        "price": 35000,
+        "stock": 5
+    },
+    {
+        "id": 16,
+        "title": "escritorio mold.",
+        "category": "chair",
+        "description": "escritorio de madera y hierro para oficina o habitación.",
+        "thumbnailUrl": "./img/lampara2.png",
+        "price": 14000,
+        "stock": 5
+    },
+    {
+        "id": 17,
+        "title": "estantería locket.",
+        "category": "chair",
+        "description": "estantería doble de hierro puro en color negro.",
+        "thumbnailUrl": "./img/sofa5.png",
+        "price": 15400,
+        "stock": 5
+    },
+    {
+        "id": 18,
+        "title": "lámpara unlight.",
+        "category": "chair",
+        "description": "lámpara de estudio de diseño finlandés para techo.",
+        "thumbnailUrl": "./img/estanteria4.png",
+        "price": 9000,
+        "stock": 5
+    },
+    {
+        "id": 19,
+        "title": "sofá rue antoine.",
+        "category": "chair",
+        "description": "sofá de salón de diseño clásico modernizado.",
+        "thumbnailUrl": "./img/sofa4.png",
+        "price": 35000,
+        "stock": 5
+    },
+    {
+        "id": 20,
+        "title": "escritorio mold.",
+        "category": "chair",
+        "description": "escritorio de madera y hierro para oficina o habitación.",
+        "thumbnailUrl": "./img/lampara4.png",
         "price": 14000,
         "stock": 5
     }

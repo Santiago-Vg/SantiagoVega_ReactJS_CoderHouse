@@ -1,15 +1,27 @@
+// CSS
 import "./App.css";
-import Navbar from "./components/NavBar";
-import ItemListContainer from "./components/container/ItemListContainer";
-import Footer from "./components/Footer";
+// PAGES
+import Home from "./pages/Home/Home";
+import Nosotros from "./pages/Nosotros/Nosotros";
+import Contacto from "./pages/Contacto/Contacto";
+import ProductDetail from "./pages/Detail/ProductDetail";
+import Category from "./components/Container/Categorys/Category";
+// REACT-ROUTER-DOM
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <ItemListContainer />
-      <Footer copyright="Todos los derechos reservados." />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/nosotros" component={Nosotros} />
+          <Route path="/contacto" component={Contacto} />
+          <Route path="/:category/:id" component={ProductDetail} />
+          <Route path="/:category" component={Category} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

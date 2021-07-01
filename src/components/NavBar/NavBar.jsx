@@ -1,12 +1,15 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 function navbar() {
   return (
     <nav className="navbar navbar-expand-lg">
-      <a className="navbar-brand" href="#">
+      <Link to="/" className="navbar-brand">
         buncits.
-      </a>
+      </Link>
+
       <button
         className="navbar-toggler"
         type="button"
@@ -20,21 +23,16 @@ function navbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              home <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              nosotros
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              contacto
-            </a>
-          </li>
+          <Link to="/" className="nav-item nav-link">
+            home
+          </Link>
+          <Link to="/nosotros" className="nav-item nav-link">
+            nosotros
+          </Link>
+          <Link to="/contacto" className="nav-item nav-link">
+            contacto
+          </Link>
+
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -51,21 +49,21 @@ function navbar() {
               className="dropdown-menu"
               aria-labelledby="navbarDropdownMenuLink"
             >
-              <a className="dropdown-item" href="#">
-                sofás
-              </a>
-              <a className="dropdown-item" href="#">
-                sillas
-              </a>
-              <a className="dropdown-item" href="#">
+              <Link to="/sofas" className="dropdown-item">
+                sofas
+              </Link>
+              <Link to="/sillas" className="dropdown-item">
+                sillas / sillones
+              </Link>
+              <Link to="/estanterias" className="dropdown-item">
                 estanterías
-              </a>
-              <a className="dropdown-item" href="#">
+              </Link>
+              <Link to="/gabinetes" className="dropdown-item">
                 gabinetes
-              </a>
-              <a className="dropdown-item" href="#">
-                lámparas
-              </a>
+              </Link>
+              <Link to="/lamparas" className="dropdown-item">
+                lamparas
+              </Link>
             </div>
           </li>
         </ul>

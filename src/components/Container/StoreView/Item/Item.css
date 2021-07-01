@@ -1,0 +1,60 @@
+p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.card {
+    width: 18rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.img-fluid {
+    width: 80%;
+}
+
+.card .bar {
+    margin-top: 1.8em;
+    margin-left: 2rem;
+    width: 0.4rem;
+    height: 12em;
+    background-color: #626668d2;
+}
+
+.card .card-title {
+    color: #626668;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.card .card-text {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02rem;
+    margin: 0 0;
+    align-self: flex-start;
+}
+
+.card .desc {
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding-right: 1rem;
+    margin: 0 0 1em 0;
+}
+
+.card .card-text::before {
+    content: "$";
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0.3rem 2em 0;
+}
+
+.link:hover {
+    color: transparent;
+}
+
+.link .card:hover {
+    background-color: #6266681c;
+}

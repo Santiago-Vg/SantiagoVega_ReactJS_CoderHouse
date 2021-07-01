@@ -1,6 +1,9 @@
+// REACT COMPONENTS
 import React, { useState } from "react";
+// CSS
+import "./ItemCount.css";
 
-function ItemCount({ stock }) {
+const ItemCount = ({ stock }) => {
   const [productStock, setProductStock] = useState(stock);
 
   let [count, setCount] = useState(0);
@@ -32,12 +35,12 @@ function ItemCount({ stock }) {
   return (
     <div className="d-flex">
       <div className="btn_amount d-flex">
-        <button className="btn_add" onClick={handleIncrement}>
-          +
-        </button>
-        <div className="amount">{count}</div>
         <button className="btn_rem" onClick={handleDecrement}>
           -
+        </button>
+        <div className="amount">{count}</div>
+        <button className="btn_add" onClick={handleIncrement}>
+          +
         </button>
       </div>
       <div>
@@ -47,6 +50,6 @@ function ItemCount({ stock }) {
       </div>
     </div>
   );
-}
+};
 
 export default ItemCount;
