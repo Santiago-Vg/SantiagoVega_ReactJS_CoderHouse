@@ -6,7 +6,7 @@ import ItemListContainer from "../StoreView/ItemListContainer/ItemListContainer"
 const category = () => {
   return (
     <div>
-      <ItemListContainer view="category" />
+      <ItemListContainer />
     </div>
   );
 };

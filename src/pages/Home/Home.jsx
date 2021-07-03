@@ -6,7 +6,7 @@ import ItemListContainer from "../../components/Container/StoreView/ItemListCont
 const Home = () => {
   return (
     <div>
-      <ItemListContainer view="store" />
+      <ItemListContainer />
     </div>
   );
 };

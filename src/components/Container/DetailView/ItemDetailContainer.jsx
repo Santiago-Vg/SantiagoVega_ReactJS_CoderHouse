@@ -1,7 +1,7 @@
 /// REACT COMPONENTS
 import React, { useState, useEffect } from "react";
 // COMPONENTS
-import ItemDetailMap from "./ItemDetailMap";
+import ItemDetail from "./ItemDetail/ItemDetail";
 // REACT-ROUTER-DOM
 import { useParams } from "react-router-dom";
 
@@ -14,8 +14,10 @@ const ItemDetailContainer = () => {
         async (response) => {
           try {
             const data = await response.json();
-            const filtered = data.filter(
-              (item) => item.id === parseInt(params.id)
+            const filtered = data.find(
+              (item) =>
+                item.id === parseInt(params.id) &&
+                item.category === params.category
             );
             setProducts(filtered);
           } catch (error) {
@@ -25,21 +27,27 @@ const ItemDetailContainer = () => {
         }
       );
     }, 2500);
-  }, [params.id]);
+  }, [params.id, params.category]);
   return (
     <>
       <div className="item-list-container row px-0 mx-0 my-5">
-        {products.length === 0 ? (
+        {!products ? (
           <div className="loadingMsg">
             <p>
-              cargando vista de detalle...
+              producto inexistente
+              <br /> <span className="loadingMsg_Logo">buncits.</span>
+            </p>
+          </div>
+        ) : products.length === 0 ? (
+          <div className="loadingMsg">
+            <p>
+              cargando vista de detalle
               <br /> <span className="loadingMsg_Logo">buncits.</span>
             </p>
           </div>
         ) : (
-          ""
+          <ItemDetail data={products} />
         )}
-        <ItemDetailMap allProducts={products} />
       </div>
     </>
   );

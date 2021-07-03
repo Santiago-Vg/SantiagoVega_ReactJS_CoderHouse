@@ -2,11 +2,10 @@
 import React, { useState, useEffect } from "react";
 // COMPONENTS
 import ItemList from "../ItemList";
-import ItemCategory from "../../Categorys/CategoryList";
 // CSS
 import "./ItemListContainer.css";
 
-const ItemListContainer = ({ view }) => {
+const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     setTimeout(() => {
@@ -33,12 +32,7 @@ const ItemListContainer = ({ view }) => {
           </p>
         </div>
       ) : (
-        ""
-      )}
-      {view === "store" ? (
         <ItemList allProducts={products} />
-      ) : (
-        <ItemCategory allProducts={products} />
       )}
     </div>
   );
