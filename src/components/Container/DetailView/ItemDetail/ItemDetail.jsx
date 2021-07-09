@@ -1,19 +1,40 @@
 // REACT COMPONENTS
-import React from "react";
+import React, { useContext, useState } from "react";
 // COMPONENTS
 import ItemCount from "../../StoreView/ItemCount/ItemCount";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 // CSS
 import "./ItemDetail.css";
+import { CartContext } from "../../../../context/CartContext";
 
 const ItemDetail = ({ data }) => {
-  let product = data;
+  let {
+    id,
+    thumbnailUrl,
+    thumbnailUrl2,
+    thumbnailUrl3,
+    title,
+    description,
+    price,
+    stock,
+  } = data;
+
+  const { cart } = useContext(CartContext);
+  console.log(cart);
+
+  const [amount, setAmount] = useState(0);
+
+  const updateAmount = (qty) => {
+    setAmount(amount + qty);
+  };
+
+  console.log(amount);
 
   return (
     <div
       className="row d-flex justify-content-center detail_container py-2"
-      key={product.id}
+      key={id}
     >
       <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
         <div
@@ -24,23 +45,23 @@ const ItemDetail = ({ data }) => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
-                src={product.thumbnailUrl}
+                src={thumbnailUrl}
                 className="img-fluid ml-4 mb-3"
-                alt={product.title}
+                alt={title}
               ></img>
             </div>
             <div className="carousel-item">
               <img
-                src={product.thumbnailUrl2}
+                src={thumbnailUrl2}
                 className="img-fluid ml-4 mb-3"
-                alt={product.title}
+                alt={title}
               ></img>
             </div>
             <div className="carousel-item">
               <img
-                src={product.thumbnailUrl3}
+                src={thumbnailUrl3}
                 className="img-fluid ml-4 mb-3"
-                alt={product.title}
+                alt={title}
               ></img>
             </div>
           </div>
@@ -72,11 +93,21 @@ const ItemDetail = ({ data }) => {
         <div className="d-flex text_container">
           <div className="bar"></div>
           <div className=" text-left">
-            <h5 className="product_title">{product.title}</h5>
-            <p className="product_desc">{product.description}</p>
-            <p className="card-text">{product.price}</p>
+            <h5 className="product_title">{title}</h5>
+            <p className="product_desc">{description}</p>
+            <p className="card-text">{price}</p>
             <div className="buy d-flex align-items-center">
-              <ItemCount stock={product.stock} />
+              {amount > 0 ? (
+                <Link to="/cart">
+                  <button className="finishBtn">terminar compra</button>
+                </Link>
+              ) : (
+                <ItemCount
+                  product={data}
+                  stock={stock}
+                  updateAmount={updateAmount}
+                />
+              )}
             </div>
             <div className="d-flex justify-content-end">
               <Link to="/" className="return_btn">

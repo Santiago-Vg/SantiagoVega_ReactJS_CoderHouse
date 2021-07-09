@@ -6,11 +6,11 @@ import { useParams } from "react-router-dom";
 
 const ItemList = ({ allProducts }) => {
   let products = allProducts;
-  let hasCategory = useParams().category;
+  let { category } = useParams();
 
-  return hasCategory
+  return category
     ? products
-        .filter((items) => items.category === hasCategory)
+        .filter((items) => items.category === category)
         .map((items) => {
           return <Item data={items} key={items.id} />;
         })

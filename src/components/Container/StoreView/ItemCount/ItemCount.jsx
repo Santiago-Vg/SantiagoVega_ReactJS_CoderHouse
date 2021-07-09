@@ -1,9 +1,10 @@
 // REACT COMPONENTS
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CartContext } from "../../../../context/CartContext";
 // CSS
 import "./ItemCount.css";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ product, stock, updateAmount }) => {
   const [productStock, setProductStock] = useState(stock);
 
   let [count, setCount] = useState(0);
@@ -22,11 +23,14 @@ const ItemCount = ({ stock }) => {
     }
   };
 
+  const { addToCart } = useContext(CartContext);
+
   const onAdd = () => {
     if (count >= 1) {
+      addToCart(product, count);
+      updateAmount(count);
+      setCount(0);
       alert(`Se añadieron ${count} productos al carrito.`);
-      document.getElementById("warn").innerHTML = "!";
-      setCount((count = 0));
     } else {
       alert(`Se tiene que agregar al menos un producto.`);
     }
@@ -45,7 +49,7 @@ const ItemCount = ({ stock }) => {
       </div>
       <div>
         <button className="btn_addToCart" onClick={onAdd}>
-          añadir.
+          añadir
         </button>
       </div>
     </div>

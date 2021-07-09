@@ -7,7 +7,8 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [products, setProducts] = useState([]);
-  const params = useParams();
+
+  const { id, category } = useParams();
   useEffect(() => {
     setTimeout(() => {
       fetch("https://mocki.io/v1/189f9f70-9fbb-41f5-92a0-319105353673").then(
@@ -15,9 +16,7 @@ const ItemDetailContainer = () => {
           try {
             const data = await response.json();
             const filtered = data.find(
-              (item) =>
-                item.id === parseInt(params.id) &&
-                item.category === params.category
+              (item) => item.id === parseInt(id) && item.category === category
             );
             setProducts(filtered);
           } catch (error) {
@@ -27,7 +26,7 @@ const ItemDetailContainer = () => {
         }
       );
     }, 2500);
-  }, [params.id, params.category]);
+  }, [id, category]);
   return (
     <>
       <div className="item-list-container row px-0 mx-0 my-5">
