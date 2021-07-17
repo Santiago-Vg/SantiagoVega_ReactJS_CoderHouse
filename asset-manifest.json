@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/SantiagoVega_ReactJS_CoderHouse/static/css/main.faaa45a6.chunk.css",
+    "main.js": "/SantiagoVega_ReactJS_CoderHouse/static/js/main.36ffaade.chunk.js",
+    "main.js.map": "/SantiagoVega_ReactJS_CoderHouse/static/js/main.36ffaade.chunk.js.map",
+    "runtime-main.js": "/SantiagoVega_ReactJS_CoderHouse/static/js/runtime-main.9fd0fa8d.js",
+    "runtime-main.js.map": "/SantiagoVega_ReactJS_CoderHouse/static/js/runtime-main.9fd0fa8d.js.map",
+    "static/js/2.303d42c5.chunk.js": "/SantiagoVega_ReactJS_CoderHouse/static/js/2.303d42c5.chunk.js",
+    "static/js/2.303d42c5.chunk.js.map": "/SantiagoVega_ReactJS_CoderHouse/static/js/2.303d42c5.chunk.js.map",
+    "index.html": "/SantiagoVega_ReactJS_CoderHouse/index.html",
+    "static/css/main.faaa45a6.chunk.css.map": "/SantiagoVega_ReactJS_CoderHouse/static/css/main.faaa45a6.chunk.css.map",
+    "static/js/2.303d42c5.chunk.js.LICENSE.txt": "/SantiagoVega_ReactJS_CoderHouse/static/js/2.303d42c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fd0fa8d.js",
+    "static/js/2.303d42c5.chunk.js",
+    "static/css/main.faaa45a6.chunk.css",
+    "static/js/main.36ffaade.chunk.js"
+  ]
+}

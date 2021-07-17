@@ -1,0 +1,89 @@
+[{
+        "id": 1,
+        "title": "gabinete midcent.",
+        "category": "gabinetes",
+        "description": "gabinete de madera de caoba importada de cuba.",
+        "thumbnailUrl": "https://i.ibb.co/g7vD9mV/producto1.png",
+        "thumbnailUrl2": "https://i.ibb.co/98BXtY2/gG07.png",
+        "thumbnailUrl3": "https://i.ibb.co/gRDzBrc/gG15.png",
+        "price": 25000,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "title": "silla soft poang.",
+        "description": "silla al estilo escandinavo de madera curvada.",
+        "category": "sillas",
+        "thumbnailUrl": "https://i.ibb.co/tXkVdHL/silla-poang.png",
+        "thumbnailUrl2": "https://i.ibb.co/94gHX8h/sG07.png",
+        "thumbnailUrl3": "https://i.ibb.co/WHXW0Bt/SG15.png",
+        "price": 18500,
+        "stock": 5
+    },
+    {
+        "id": 3,
+        "title": "gabinete dunes.",
+        "category": "gabinetes",
+        "description": "gabinete de roble real liso importado de etiopía.",
+        "thumbnailUrl": "https://i.ibb.co/qgfJCbq/gabinete.png",
+        "thumbnailUrl2": "https://i.ibb.co/WFMh571/g2G07.png",
+        "thumbnailUrl3": "https://i.ibb.co/d7zxsDd/g2G15.png",
+        "price": 22000,
+        "stock": 5
+    },
+    {
+        "id": 4,
+        "title": "sillón analyst.",
+        "category": "sillas",
+        "description": "sillón de madera oscura y almohadillas de cuero",
+        "thumbnailUrl": "https://i.ibb.co/sbCtfRJ/silla-poang2.png",
+        "thumbnailUrl2": "https://i.ibb.co/Ltx0fzm/s2G01.png",
+        "thumbnailUrl3": "https://i.ibb.co/cFTt51N/s2G15.png",
+        "price": 19000,
+        "stock": 5
+    },
+    {
+        "id": 5,
+        "title": "estantería locket.",
+        "category": "estanterias",
+        "description": "estantería doble de hierro puro en color negro.",
+        "thumbnailUrl": "https://i.ibb.co/8s4WqQ8/estanteria.png",
+        "thumbnailUrl2": "https://i.ibb.co/Bf8KtLF/eG07.png",
+        "thumbnailUrl3": "https://i.ibb.co/F0bnrN5/eG15.png",
+        "price": 15400,
+        "stock": 5
+    },
+    {
+        "id": 6,
+        "title": "lámpara unlight.",
+        "category": "lamparas",
+        "description": "lámpara de estudio de diseño finlandés para techo.",
+        "thumbnailUrl": "https://i.ibb.co/vDYxBtP/lamp.png",
+        "thumbnailUrl2": "https://i.ibb.co/9WDYhFd/sD12.png",
+        "thumbnailUrl3": "https://i.ibb.co/5hfw7YK/sN05.png",
+        "price": 9000,
+        "stock": 5
+    },
+    {
+        "id": 7,
+        "title": "sofá rue antoine.",
+        "category": "sofas",
+        "description": "sofá de salón de diseño clásico modernizado.",
+        "thumbnailUrl": "https://i.ibb.co/TtZxnWw/sofa.png",
+        "thumbnailUrl2": "https://i.ibb.co/prR1cy4/G07.png",
+        "thumbnailUrl3": "https://i.ibb.co/VNqK4tB/G12.png",
+        "price": 35000,
+        "stock": 5
+    },
+    {
+        "id": 8,
+        "title": "escritorio mold.",
+        "category": "gabinetes",
+        "description": "escritorio de madera y hierro para oficina o habitación.",
+        "thumbnailUrl": "https://i.ibb.co/NK56cwS/desk.png",
+        "thumbnailUrl2": "https://i.ibb.co/prR1cy4/G07.png",
+        "thumbnailUrl3": "https://i.ibb.co/VNqK4tB/G12.png",
+        "price": 14000,
+        "stock": 5
+    }
+]
