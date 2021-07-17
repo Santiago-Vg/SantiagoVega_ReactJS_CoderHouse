@@ -3,26 +3,27 @@ import React, { useState, useEffect, useContext } from "react";
 // COMPONENTS
 import ItemList from "../ItemList";
 import { CartContext } from "../../../../context/CartContext";
+import { db } from "../../../../Firebase";
 // CSS
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+
+  const getProducts = () => {
+    const firebaseProducts = [];
+    db.collection("buncitsProducts").onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((item) => {
+        firebaseProducts.push({ ...item.data(), id: item.id });
+      });
+      setProducts(firebaseProducts);
+    });
+  };
+
   useEffect(() => {
-    setTimeout(() => {
-      fetch("https://mocki.io/v1/189f9f70-9fbb-41f5-92a0-319105353673").then(
-        async (response) => {
-          try {
-            const data = await response.json();
-            setProducts(data);
-          } catch (error) {
-            console.log("Error!");
-            console.error(error);
-          }
-        }
-      );
-    }, 2500);
+    getProducts();
   }, []);
+
   const { cart } = useContext(CartContext);
   console.log(cart);
   return (

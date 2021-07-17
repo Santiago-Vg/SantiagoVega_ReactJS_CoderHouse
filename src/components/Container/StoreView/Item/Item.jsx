@@ -1,20 +1,12 @@
 // REACT COMPONENTS
-import React, { useState } from "react";
+import React from "react";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
-// COMPONENTS
-import ItemCount from "../ItemCount/ItemCount";
 // CSS
 import "./Item.css";
 
 const Item = ({ data }) => {
-  let { id, thumbnailUrl, title, description, price, stock, category } = data;
-
-  const [amount, setAmount] = useState(0);
-
-  const updateAmount = (qty) => {
-    setAmount(amount + qty);
-  };
+  let { id, thumbnailUrl, title, description, price, category } = data;
 
   return (
     <Link to={`/${category}/${id}`} key={id} className="link">
@@ -35,17 +27,9 @@ const Item = ({ data }) => {
               className="buy d-flex align-items-center"
               onClick={(e) => e.preventDefault()}
             >
-              {amount > 0 ? (
-                <Link to="/cart">
-                  <button className="finishBtn">terminar compra</button>
-                </Link>
-              ) : (
-                <ItemCount
-                  product={data}
-                  stock={stock}
-                  updateAmount={updateAmount}
-                />
-              )}
+              <Link to={`/${category}/${id}`} key={id}>
+                <button className="btn buyBtn">comprar</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,7 +5,13 @@ import { CartContext } from "../../../../context/CartContext";
 import "./ItemCount.css";
 
 const ItemCount = ({ product, stock, updateAmount }) => {
-  const [productStock, setProductStock] = useState(stock);
+  const userProduct = JSON.parse(localStorage.getItem("userCart")).find(
+    (item) => item.id === product.id
+  );
+
+  const [productStock, setProductStock] = useState(
+    userProduct ? stock - userProduct.amount : stock
+  );
 
   let [count, setCount] = useState(0);
 
@@ -35,6 +41,8 @@ const ItemCount = ({ product, stock, updateAmount }) => {
       alert(`Se tiene que agregar al menos un producto.`);
     }
   };
+
+  console.log(JSON.parse(localStorage.getItem("userCart")));
 
   return (
     <div className="d-flex">

@@ -1,12 +1,11 @@
 // REACT COMPONENTS
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 // COMPONENTS
 import ItemCount from "../../StoreView/ItemCount/ItemCount";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
 // CSS
 import "./ItemDetail.css";
-import { CartContext } from "../../../../context/CartContext";
 
 const ItemDetail = ({ data }) => {
   let {
@@ -20,16 +19,11 @@ const ItemDetail = ({ data }) => {
     stock,
   } = data;
 
-  const { cart } = useContext(CartContext);
-  console.log(cart);
-
   const [amount, setAmount] = useState(0);
 
   const updateAmount = (qty) => {
     setAmount(amount + qty);
   };
-
-  console.log(amount);
 
   return (
     <div
