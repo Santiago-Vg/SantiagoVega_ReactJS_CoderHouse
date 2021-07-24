@@ -1,8 +1,7 @@
 // REACT COMPONENTS
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 // COMPONENTS
 import ItemList from "../ItemList";
-import { CartContext } from "../../../../context/CartContext";
 import { db } from "../../../../Firebase";
 // CSS
 import "./ItemListContainer.css";
@@ -24,8 +23,6 @@ const ItemListContainer = () => {
     getProducts();
   }, []);
 
-  const { cart } = useContext(CartContext);
-  console.log(cart);
   return (
     <div className="item-list-container row px-0 mx-0 my-5">
       {products.length === 0 ? (

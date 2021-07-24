@@ -7,7 +7,6 @@ import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
   const { cartAmount } = useContext(CartContext);
-  console.log(cartAmount);
   return cartAmount === "0" ? (
     ""
   ) : (

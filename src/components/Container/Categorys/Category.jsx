@@ -1,9 +1,16 @@
 // REACT COMPONENTS
-import React from "react";
+import React, { useContext, useEffect } from "react";
 // COMPONENTS
 import ItemListContainer from "../StoreView/ItemListContainer/ItemListContainer";
+import { CartContext } from "../../../context/CartContext";
 
-const category = () => {
+const Category = () => {
+  const { setIsInStore } = useContext(CartContext);
+
+  useEffect(() => {
+    setIsInStore(true);
+  }, [setIsInStore]);
+
   return (
     <div>
       <ItemListContainer />
@@ -11,4 +18,4 @@ const category = () => {
   );
 };
 
-export default category;
+export default Category;

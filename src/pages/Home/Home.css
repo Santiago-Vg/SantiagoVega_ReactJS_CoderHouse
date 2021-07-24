@@ -1,0 +1,61 @@
+.hero-container {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/buncits-41df0.appspot.com/o/background%20(1).jpg?alt=media&token=e05a2dd3-afef-4e48-af79-e166301b81b0');
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    width: 100vw;
+}
+
+.hero-container h2 {
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.hero-container .hero-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.info-container {
+    margin: 7em 6rem;
+}
+
+.info-container .text-container {
+    margin: 2em 0;
+}
+
+.info-container h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #626668;
+    margin: 0 8rem 1.7em 0;
+}
+
+
+.info-container h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #626668;
+
+}
+
+.info-container p {
+    font-size: .8rem;
+    font-weight: 400;
+    color: #626668;
+}
+
+.returnBtn {
+    margin: 5em 0 5em 0;
+    color: #626668;
+}
+
+.returnBtn:hover {
+    color: rgba(255, 255, 255, 0.733);
+    text-decoration: none;
+}
+
+.returnBtn i span {
+    font-family: Montserrat, sans-serif;
+    margin-top: .8em;
+}

@@ -29,20 +29,19 @@ const ItemCount = ({ product, stock, updateAmount }) => {
     }
   };
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, openModal, handleModal } = useContext(CartContext);
 
   const onAdd = () => {
     if (count >= 1) {
       addToCart(product, count);
       updateAmount(count);
       setCount(0);
-      alert(`Se añadieron ${count} productos al carrito.`);
+      handleModal(count);
+      console.log(openModal);
     } else {
       alert(`Se tiene que agregar al menos un producto.`);
     }
   };
-
-  console.log(JSON.parse(localStorage.getItem("userCart")));
 
   return (
     <div className="d-flex">

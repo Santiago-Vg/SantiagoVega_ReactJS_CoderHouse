@@ -23,13 +23,8 @@ const Item = ({ data }) => {
             <h5 className="card-title">{title}</h5>
             <p className="desc">{description}</p>
             <p className="card-text">{price}</p>
-            <div
-              className="buy d-flex align-items-center"
-              onClick={(e) => e.preventDefault()}
-            >
-              <Link to={`/${category}/${id}`} key={id}>
-                <button className="btn buyBtn">comprar</button>
-              </Link>
+            <div className="buy d-flex align-items-center">
+              <button className="btn buyBtn">comprar</button>
             </div>
           </div>
         </div>

@@ -1,0 +1,18 @@
+.img-link {
+    width: 100%;
+    filter: grayscale(80%);
+    padding: 0 0;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.img-link:hover {
+    filter: grayscale(0%);
+    background-color: #62666821;
+}
+
+.img-link img {
+    border-radius: 15px;
+
+}

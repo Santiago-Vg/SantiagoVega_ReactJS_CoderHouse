@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-function footer({ copyright }) {
+function footer({ copyright = "Todos los derechos reservados." }) {
   return (
     <div className="footer">
       <p>©</p>

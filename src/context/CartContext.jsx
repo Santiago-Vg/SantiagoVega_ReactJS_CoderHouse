@@ -3,6 +3,13 @@ import { createContext, useState, useEffect } from "react";
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
+  const [isInStore, setIsInStore] = useState(false);
+
+  const [searchImput, setSearchImput] = useState("");
+  const handleSearch = (e) => {
+    setSearchImput(e.target.value);
+  };
+
   const [cart, setCart] = useState([]);
   const [cartAmount, setCartAmount] = useState("");
   const [cartTotal, setCartTotal] = useState("");
@@ -55,6 +62,14 @@ export const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
+  const [openModal, setOpenModal] = useState(false);
+  const [qtyModal, setQtyModal] = useState(0);
+
+  const handleModal = (amount) => {
+    setQtyModal(amount);
+    setOpenModal(!openModal);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -65,6 +80,13 @@ export const CartProvider = ({ children }) => {
         addToCart,
         remProduct,
         cartTotal,
+        searchImput,
+        handleSearch,
+        isInStore,
+        setIsInStore,
+        openModal,
+        handleModal,
+        qtyModal,
       }}
     >
       {children}

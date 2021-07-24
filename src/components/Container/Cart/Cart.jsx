@@ -1,9 +1,10 @@
 // REACT
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 // REACT ROUTER DOM
 import { useHistory } from "react-router-dom";
 // COMPONENTS
 import { CartContext } from "../../../context/CartContext";
+import Checkout from "../../Checkout/Checkout";
 // CSS
 import "./Cart.css";
 
@@ -13,10 +14,10 @@ const Cart = () => {
 
   const history = useHistory();
 
+  const [checkout, setCheckout] = useState(false);
+
   const cartAlert = () => {
-    alert("Gracias por tu Compra!");
-    clearCart();
-    history.push("/");
+    setCheckout(true);
   };
 
   const goBack = () => {
@@ -34,7 +35,7 @@ const Cart = () => {
             volver
           </button>
         </div>
-      ) : (
+      ) : !checkout ? (
         cart.map((item) => {
           return (
             <div
@@ -55,7 +56,7 @@ const Cart = () => {
                       onClick={remProduct}
                       value={item.id}
                     >
-                      X
+                      <i className="fas fa-times-circle"></i>
                     </button>
                   </div>
                 </div>
@@ -70,8 +71,12 @@ const Cart = () => {
             </div>
           );
         })
+      ) : (
+        <div className="d-flex align-items-center cartItem flex-wrap justify-content-center my-3 mx-4 col-11">
+          <Checkout />
+        </div>
       )}
-      {!cart.length ? (
+      {!cart.length || checkout ? (
         ""
       ) : (
         <div className="col-11 px-0">

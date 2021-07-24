@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "./NavBar.css";
+import { CartContext } from "../../context/CartContext";
 
-function navbar() {
+import SearchImput from "./SearchImput";
+
+const NavBar = () => {
+  const { isInStore } = useContext(CartContext);
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg" id="navbar">
       <Link to="/" className="navbar-brand">
         buncits.
       </Link>
@@ -26,16 +31,30 @@ function navbar() {
           <Link to="/" className="nav-item nav-link">
             home
           </Link>
-          <Link to="/nosotros" className="nav-item nav-link">
+          <ScrollLink
+            to="nosotros"
+            className={
+              isInStore ? "nav-item nav-link disabled" : "nav-item nav-link"
+            }
+            smooth={true}
+          >
             nosotros
+          </ScrollLink>
+          <ScrollLink
+            to="productos"
+            className={
+              isInStore ? "nav-item nav-link disabled" : "nav-item nav-link"
+            }
+            smooth={true}
+          >
+            productos
+          </ScrollLink>
+          <Link to="/store" className="navi-item nav-link store">
+            <span>|</span>tienda
           </Link>
-          <Link to="/contacto" className="nav-item nav-link">
-            contacto
-          </Link>
-
           <li className="nav-item dropdown">
             <Link
-              to="/"
+              to="/store"
               className="nav-link dropdown-toggle"
               id="navbarDropdownMenuLink"
               role="button"
@@ -43,7 +62,7 @@ function navbar() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <span>|</span> productos
+              categorías
             </Link>
             <div
               className="dropdown-menu"
@@ -68,9 +87,7 @@ function navbar() {
           </li>
         </ul>
         <div className="widgets d-flex align-items-center">
-          <div>
-            <input type="text" placeholder="buscar" />
-          </div>
+          {isInStore ? <SearchImput /> : ""}
           <div>
             <CartWidget />
           </div>
@@ -78,6 +95,6 @@ function navbar() {
       </div>
     </nav>
   );
-}
+};
 
-export default navbar;
+export default NavBar;

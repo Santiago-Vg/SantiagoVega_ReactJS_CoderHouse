@@ -60,14 +60,11 @@
 }
 
 .cartItem .row .prodTitle .btnContainer button {
-    color: #fff;
+    color: #3d3f41;
     border: none;
     background-color: transparent;
-    font-size: .5rem;
+    font-size: 1rem;
     font-weight: 400;
-    background-color: #626668c9;
-    border-radius: 50%;
-    padding: .2rem .4rem;
     -webkit-box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
 }

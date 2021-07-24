@@ -104,7 +104,7 @@ const ItemDetail = ({ data }) => {
               )}
             </div>
             <div className="d-flex justify-content-end">
-              <Link to="/" className="return_btn">
+              <Link to="/store" className="return_btn">
                 ← volver.
               </Link>
             </div>
