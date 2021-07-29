@@ -37,7 +37,8 @@ form .btn,
 
 form .btn:hover,
 .orderGenerated button:hover {
-    background-color: #62666880;
+    background-color: #fff;
+    color: #626668c9;
 }
 
 .orderGenerated {

@@ -56,5 +56,6 @@
 }
 
 .modalContainer .btn:hover {
-    opacity: 80%;
+    background-color: #fff;
+    color: #626668c9;
 }

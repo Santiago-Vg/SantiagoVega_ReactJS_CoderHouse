@@ -102,12 +102,14 @@
 }
 
 .prodTitle .fas:hover {
-    opacity: 80%;
+
+    color: #626668c9;
     font-size: 1.2rem;
 }
 
 .cart .emptyCart button:hover,
 .cartButtons .finishBtn:hover,
 .cartButtons .emptyBtn:hover {
-    opacity: 80%;
+    background-color: #fff;
+    color: #626668c9;
 }
