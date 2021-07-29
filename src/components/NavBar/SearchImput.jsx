@@ -1,8 +1,10 @@
+// REACT
 import React, { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
 
 const SearchImput = () => {
-  const { handleSearch } = useContext(CartContext);
+  const { handleSearch } = useContext(SiteContext);
 
   return (
     <div>

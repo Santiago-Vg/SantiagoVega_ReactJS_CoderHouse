@@ -1,10 +1,14 @@
+// REACT
 import React, { useContext } from "react";
+// REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
+// CONTEXT
+import { SiteContext } from "../../../context/SiteContext";
+// CSS
 import "./ModalComponent.css";
-import { CartContext } from "../../../context/CartContext";
 
 const ModalComponent = ({ amount = 0 }) => {
-  const { openModal, handleModal } = useContext(CartContext);
+  const { openModal, handleModal } = useContext(SiteContext);
 
   return openModal ? (
     <div onClick={handleModal} className="modalBackground">

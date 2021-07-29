@@ -49,6 +49,12 @@ form .btn:hover,
 
 .orderGenerated p {
     margin-top: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    color: #3d3f41
+}
+
+.orderGenerated h6 {
+    margin-top: .2rem;
+    font-size: 1rem;
     color: #3d3f41
 }

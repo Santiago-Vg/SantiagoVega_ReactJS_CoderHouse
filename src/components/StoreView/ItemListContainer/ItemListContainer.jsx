@@ -1,8 +1,9 @@
-// REACT COMPONENTS
+// REACT
 import React, { useState, useEffect } from "react";
 // COMPONENTS
 import ItemList from "../ItemList";
-import { db } from "../../../../Firebase";
+// FIREBASE
+import { db } from "../../../Firebase";
 // CSS
 import "./ItemListContainer.css";
 

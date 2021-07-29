@@ -1,15 +1,17 @@
-// REACT COMPONENTS
+// REACT
 import React, { useContext, useEffect } from "react";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
 // COMPONENTS
 import ItemListContainer from "../StoreView/ItemListContainer/ItemListContainer";
-import { CartContext } from "../../../context/CartContext";
 
 const Category = () => {
-  const { setIsInStore } = useContext(CartContext);
+  const { setIsInStore, setIsInHome } = useContext(SiteContext);
 
   useEffect(() => {
     setIsInStore(true);
-  }, [setIsInStore]);
+    setIsInHome(false);
+  }, [setIsInStore, setIsInHome]);
 
   return (
     <div>

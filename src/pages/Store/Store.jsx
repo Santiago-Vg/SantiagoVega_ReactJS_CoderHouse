@@ -1,13 +1,17 @@
+// REACT
 import React, { useContext, useEffect } from "react";
-import ItemListContainer from "../../components/Container/StoreView/ItemListContainer/ItemListContainer";
-import { CartContext } from "../../context/CartContext";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
+// COMPONENTS
+import ItemListContainer from "../../components/StoreView/ItemListContainer/ItemListContainer";
 
 const Store = () => {
-  const { setIsInStore } = useContext(CartContext);
+  const { setIsInStore, setIsInHome } = useContext(SiteContext);
 
   useEffect(() => {
     setIsInStore(true);
-  }, [setIsInStore]);
+    setIsInHome(false);
+  }, [setIsInStore, setIsInHome]);
 
   return (
     <div>

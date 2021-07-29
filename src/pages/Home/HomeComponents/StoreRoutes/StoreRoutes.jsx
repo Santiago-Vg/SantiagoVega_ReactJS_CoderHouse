@@ -1,5 +1,8 @@
+// REACT
 import React from "react";
+// REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
+// CSS
 import "./StoreRoutes.css";
 
 const StoreRoutes = () => {

@@ -1,16 +1,29 @@
 // REACT
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 // REACT ROUTER DOM
 import { useHistory } from "react-router-dom";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
 // COMPONENTS
-import { CartContext } from "../../../context/CartContext";
-import Checkout from "../../Checkout/Checkout";
+import Checkout from "../Checkout/Checkout";
 // CSS
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, cartAmount, clearCart, remProduct, cartTotal } =
-    useContext(CartContext);
+  const {
+    cart,
+    cartAmount,
+    clearCart,
+    remProduct,
+    cartTotal,
+    setIsInStore,
+    setIsInHome,
+  } = useContext(SiteContext);
+
+  useEffect(() => {
+    setIsInStore(false);
+    setIsInHome(false);
+  }, [setIsInStore, setIsInHome]);
 
   const history = useHistory();
 
@@ -62,7 +75,8 @@ const Cart = () => {
                 </div>
                 <p>{item.description}</p>
                 <p>
-                  Cantidad: {item.amount} - Precio: $ {item.price}
+                  Cantidad: <strong>{item.amount}</strong> - Precio:{" "}
+                  <strong>$ {item.price}</strong>
                 </p>
                 <p className="prodTotal pb-4">
                   Total: $ {item.amount * item.price}

@@ -1,10 +1,11 @@
-/// REACT COMPONENTS
+/// REACT
 import React, { useState, useEffect } from "react";
-// COMPONENTS
-import ItemDetail from "./ItemDetail/ItemDetail";
-import { db } from "../../../Firebase";
 // REACT-ROUTER-DOM
 import { useParams } from "react-router-dom";
+// FIREBASE
+import { db } from "../../Firebase";
+// COMPONENTS
+import ItemDetail from "./ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [products, setProducts] = useState([]);

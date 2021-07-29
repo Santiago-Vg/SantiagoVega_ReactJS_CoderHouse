@@ -1,16 +1,20 @@
-// REACT COMPONENTS
+// REACT
 import React, { useContext, useEffect } from "react";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
 // COMPONENTS
-import ItemDetailContainer from "../../components/Container/DetailView/ItemDetailContainer";
-import { CartContext } from "../../context/CartContext";
-import ModalComponent from "../../components/Checkout/ModalComponent/ModalComponent";
+import ItemDetailContainer from "../../components/DetailView/ItemDetailContainer";
+import ModalComponent from "../../components/Checkout/CheckoutComponents/ModalComponent";
 
 const ProductDetail = () => {
-  const { setIsInStore, openModal, qtyModal } = useContext(CartContext);
+  const { setIsInStore, setIsInHome, openModal, qtyModal, setSearchImput } =
+    useContext(SiteContext);
 
   useEffect(() => {
     setIsInStore(true);
-  }, [setIsInStore]);
+    setIsInHome(false);
+    setSearchImput("");
+  }, [setIsInStore, setIsInHome, setSearchImput]);
 
   return (
     <div>

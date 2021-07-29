@@ -37,6 +37,13 @@
     font-weight: 300;
 }
 
+.navbar .navbar-brand:hover,
+.cart-icon .fas:hover,
+.navbar .nav-link:hover,
+.navbar .nav-item:hover {
+    color: #626668
+}
+
 .navbar input::placeholder {
     color: #fff;
     font-weight: 300;
@@ -55,6 +62,21 @@
 .store span {
     padding-right: 1rem;
 }
+
+.searchMsg {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #626668;
+}
+
+.searchMsg .fas {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
 
 @media screen and (max-width: 992px) {
     .navbar .dropdown span {

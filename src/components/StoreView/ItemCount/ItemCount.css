@@ -32,3 +32,8 @@
     font-weight: 600;
     padding: 0 1rem;
 }
+
+.btn_amount:hover,
+.btn_addToCart:hover {
+    opacity: 80%;
+}

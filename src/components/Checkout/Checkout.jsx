@@ -1,20 +1,19 @@
+// REACT
 import React, { useContext, useState } from "react";
-import "./Checkout.css";
-import { CartContext } from "../../context/CartContext";
-import { db } from "../../Firebase";
+// REACT-ROUTER-DOM
 import { useHistory } from "react-router-dom";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
+// FIREBASE
+import { db } from "../../Firebase";
+// COMPONENTS
 import OrderDetail from "./CheckoutComponents/OrderDetail";
+// CSS
+import "./Checkout.css";
 
 const Checkout = () => {
-  const { cart, cartTotal, clearCart } = useContext(CartContext);
-
-  const defaultClient = {
-    cliente: { nombre: "", telefono: "", email: "", direccion: "" },
-  };
-
-  const date = new Date().toLocaleString();
-  const [client, setClient] = useState(defaultClient);
-  const [order, setOrder] = useState({});
+  // STEP 1 - GET CONTEXT
+  const { cart, cartTotal, clearCart } = useContext(SiteContext);
 
   const products = cart.map((item) => {
     return {
@@ -25,6 +24,15 @@ const Checkout = () => {
     };
   });
 
+  // STEP 2 - GET ORDER DATA
+  const defaultClient = {
+    cliente: { nombre: "", telefono: "", email: "", direccion: "" },
+  };
+
+  const date = new Date().toLocaleString();
+  const [client, setClient] = useState(defaultClient);
+  const [order, setOrder] = useState({});
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setClient({ cliente: { ...client.cliente, [name]: value } });
@@ -33,6 +41,7 @@ const Checkout = () => {
     setOrder(thisOrder);
   };
 
+  // STEP 3 - SEND ORDER & UPDATE FIREBASE STOCK
   const [orderGenerated, setOrderGenerated] = useState("");
 
   const sendOrder = async (data) => {
@@ -41,11 +50,25 @@ const Checkout = () => {
     await dataRef.set(data);
   };
 
+  const updateFbStock = () => {
+    cart.forEach((item) => {
+      console.log(item.id);
+      const firebaseProduct = db
+        .collection("buncitsProducts")
+        .doc(`${item.id}`);
+      return firebaseProduct.update({
+        stock: item.stock - item.amount,
+      });
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     sendOrder(order);
+    updateFbStock();
   };
 
+  // STEP 4 - CLEAR CART - BACK TO HOMEPAGE
   const history = useHistory();
   const finishShopping = () => {
     history.push("/");
@@ -55,11 +78,11 @@ const Checkout = () => {
   return (
     <div className="container-fluid p-5">
       {orderGenerated ? (
-        <div onClick={finishShopping} className="orderGenerated">
-          <p>
-            ¡Felicidades! Orden generada con id{" "}
-            <strong>{orderGenerated}</strong>.
-          </p>
+        <div onClick={finishShopping} className="orderGenerated text-center">
+          <p>¡Felicidades, Orden generada!</p>
+          <h6>
+            Identificador para Seguimiento: <strong>{orderGenerated}</strong>.
+          </h6>
           <button> salir </button>
         </div>
       ) : (

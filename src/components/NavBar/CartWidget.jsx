@@ -2,11 +2,11 @@
 import React, { useContext } from "react";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
-// COMPONENTS
-import { CartContext } from "../../context/CartContext";
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
 
 const CartWidget = () => {
-  const { cartAmount } = useContext(CartContext);
+  const { cartAmount } = useContext(SiteContext);
   return cartAmount === "0" ? (
     ""
   ) : (

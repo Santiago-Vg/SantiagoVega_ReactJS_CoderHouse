@@ -1,4 +1,4 @@
-// REACT COMPONENTS
+// REACT
 import React from "react";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ data }) => {
-  let { id, thumbnailUrl, title, description, price, category } = data;
+  const { id, thumbnailUrl, title, description, price, category } = data;
 
   return (
     <Link to={`/${category}/${id}`} key={id} className="link">

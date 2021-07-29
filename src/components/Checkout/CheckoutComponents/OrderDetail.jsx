@@ -1,10 +1,10 @@
 // REACT
 import React, { useContext } from "react";
-// COMPONENTS
-import { CartContext } from "../../../context/CartContext";
+// CONTEXT
+import { SiteContext } from "../../../context/SiteContext";
 
 const OrderDetail = () => {
-  const { cart, cartAmount, cartTotal } = useContext(CartContext);
+  const { cart, cartAmount, cartTotal } = useContext(SiteContext);
   return (
     <div className="orderContainer p-4 mb-5">
       <div>

@@ -1,14 +1,18 @@
+// REACT
 import React, { useContext } from "react";
-import CartWidget from "./CartWidget";
+// REACT ROUTER DOM
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
-import "./NavBar.css";
-import { CartContext } from "../../context/CartContext";
-
+// CONTEXT
+import { SiteContext } from "../../context/SiteContext";
+// COMPONENTS
+import CartWidget from "./CartWidget";
 import SearchImput from "./SearchImput";
+import { Link as ScrollLink } from "react-scroll";
+// CSS
+import "./NavBar.css";
 
 const NavBar = () => {
-  const { isInStore } = useContext(CartContext);
+  const { isInStore, isInHome } = useContext(SiteContext);
   return (
     <nav className="navbar navbar-expand-lg" id="navbar">
       <Link to="/" className="navbar-brand">
@@ -34,7 +38,7 @@ const NavBar = () => {
           <ScrollLink
             to="nosotros"
             className={
-              isInStore ? "nav-item nav-link disabled" : "nav-item nav-link"
+              isInHome ? "nav-item nav-link" : "nav-item nav-link disabled"
             }
             smooth={true}
           >
@@ -43,13 +47,13 @@ const NavBar = () => {
           <ScrollLink
             to="productos"
             className={
-              isInStore ? "nav-item nav-link disabled" : "nav-item nav-link"
+              isInHome ? "nav-item nav-link" : "nav-item nav-link disabled"
             }
             smooth={true}
           >
             productos
           </ScrollLink>
-          <Link to="/store" className="navi-item nav-link store">
+          <Link to="/store" className="nav-item nav-link store">
             <span>|</span>tienda
           </Link>
           <li className="nav-item dropdown">

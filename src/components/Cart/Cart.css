@@ -28,14 +28,13 @@
     color: #fff;
     border: 1px solid transparent;
     border-radius: 30px;
-    font-size: .6rem;
+    font-size: .8rem;
     margin: 2em 0;
-    padding: .5em 0;
-    width: 35% !important;
+    padding: .5em 1rem;
+    width: 40% !important;
     -webkit-box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 11px 10px -7px rgba(0, 0, 0, 0.25);
 }
-
 
 .cartItem {
     background-color: #6266681c;
@@ -100,4 +99,15 @@
 
 .cartButtons .finishBtn {
     background-color: #161718c9;
+}
+
+.prodTitle .fas:hover {
+    opacity: 80%;
+    font-size: 1.2rem;
+}
+
+.cart .emptyCart button:hover,
+.cartButtons .finishBtn:hover,
+.cartButtons .emptyBtn:hover {
+    opacity: 80%;
 }

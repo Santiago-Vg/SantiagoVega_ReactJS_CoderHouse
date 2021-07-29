@@ -1,15 +1,19 @@
-import { createContext, useState, useEffect } from "react";
+// REACT
+import React, { createContext, useState, useEffect } from "react";
 
-export const CartContext = createContext({});
+export const SiteContext = createContext({});
 
-export const CartProvider = ({ children }) => {
+export const SiteProvider = ({ children }) => {
+  // NAVBAR RELATED CONTEXT //
   const [isInStore, setIsInStore] = useState(false);
+  const [isInHome, setIsInHome] = useState(false);
 
   const [searchImput, setSearchImput] = useState("");
   const handleSearch = (e) => {
     setSearchImput(e.target.value);
   };
 
+  // CART RELATED CONTEXT //
   const [cart, setCart] = useState([]);
   const [cartAmount, setCartAmount] = useState("");
   const [cartTotal, setCartTotal] = useState("");
@@ -38,30 +42,30 @@ export const CartProvider = ({ children }) => {
     setCartTotal(JSON.stringify(total));
   }, [cart]);
 
-  const clearCart = () => {
-    setCart([]);
-  };
-
+  // CART FUNCTIONS
   const isInCart = (id) => cart.some((item) => item.id === id);
+
+  const clearCart = () => setCart([]);
 
   const addToCart = (item, amount) => {
     if (isInCart(item.id)) {
-      const newCart = cart.map((cartItem) => {
+      const updatedCart = cart.map((cartItem) => {
         if (cartItem.id === item.id) {
           return { ...cartItem, amount: cartItem.amount + amount };
         } else return cartItem;
       });
-      setCart(newCart);
+      setCart(updatedCart);
     } else {
       setCart((prev) => [...prev, { ...item, amount }]);
     }
   };
 
   const remProduct = (e) => {
-    const newCart = cart.filter((item) => item.id !== e.target.value);
-    setCart(newCart);
+    const updatedCart = cart.filter((item) => item.id !== e.target.value);
+    setCart(updatedCart);
   };
 
+  // MODAL RELATED CONTEXT
   const [openModal, setOpenModal] = useState(false);
   const [qtyModal, setQtyModal] = useState(0);
 
@@ -71,8 +75,15 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider
+    <SiteContext.Provider
       value={{
+        isInStore,
+        setIsInStore,
+        isInHome,
+        setIsInHome,
+        searchImput,
+        setSearchImput,
+        handleSearch,
         cart,
         cartAmount,
         setCart,
@@ -80,16 +91,12 @@ export const CartProvider = ({ children }) => {
         addToCart,
         remProduct,
         cartTotal,
-        searchImput,
-        handleSearch,
-        isInStore,
-        setIsInStore,
         openModal,
         handleModal,
         qtyModal,
       }}
     >
       {children}
-    </CartContext.Provider>
+    </SiteContext.Provider>
   );
 };

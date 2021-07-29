@@ -1,6 +1,7 @@
-// REACT COMPONENTS
+// REACT
 import React, { useState, useContext } from "react";
-import { CartContext } from "../../../../context/CartContext";
+// CONTEXT
+import { SiteContext } from "../../../context/SiteContext";
 // CSS
 import "./ItemCount.css";
 
@@ -13,34 +14,29 @@ const ItemCount = ({ product, stock, updateAmount }) => {
     userProduct ? stock - userProduct.amount : stock
   );
 
-  let [count, setCount] = useState(0);
+  const { addToCart, handleModal } = useContext(SiteContext);
+
+  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
-    if (productStock >= 1) {
+    if (productStock >= 2) {
       setCount(count + 1);
       setProductStock(productStock - 1);
     }
   };
 
   const handleDecrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
       setProductStock(productStock + 1);
     }
   };
 
-  const { addToCart, openModal, handleModal } = useContext(CartContext);
-
   const onAdd = () => {
-    if (count >= 1) {
-      addToCart(product, count);
-      updateAmount(count);
-      setCount(0);
-      handleModal(count);
-      console.log(openModal);
-    } else {
-      alert(`Se tiene que agregar al menos un producto.`);
-    }
+    addToCart(product, count);
+    updateAmount(count);
+    setCount(0);
+    handleModal(count);
   };
 
   return (
