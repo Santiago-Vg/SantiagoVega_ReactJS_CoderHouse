@@ -61,7 +61,9 @@ export const SiteProvider = ({ children }) => {
   };
 
   const remProduct = (e) => {
-    const updatedCart = cart.filter((item) => item.id !== e.target.value);
+    const updatedCart = cart.filter(
+      (item) => item.id !== e.target.parentElement.value
+    );
     setCart(updatedCart);
   };
 
