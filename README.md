@@ -37,3 +37,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
     Bootstrap - Como librería CSS para la maquetación del Sitio.
     React Scroll - Para implementar "Scroll Links" en el menú de navegación (enlaces intenros).
 
+## Recorrido Rápido por el Sitio
+
+![Buncits](https://user-images.githubusercontent.com/79758203/127920573-b754d7ab-fcad-4e00-ab40-4d1ea64eeea5.gif)
+
+
