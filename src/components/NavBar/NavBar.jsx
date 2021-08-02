@@ -73,7 +73,7 @@ const NavBar = () => {
               aria-labelledby="navbarDropdownMenuLink"
             >
               <Link to="/sofas" className="dropdown-item">
-                sofas
+                sofás
               </Link>
               <Link to="/sillas" className="dropdown-item">
                 sillas / sillones
@@ -85,7 +85,7 @@ const NavBar = () => {
                 gabinetes
               </Link>
               <Link to="/lamparas" className="dropdown-item">
-                lamparas
+                lámparas
               </Link>
             </div>
           </li>
