@@ -1,9 +1,11 @@
 // REACT COMPONENTS
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 // COMPONENTS
 import ItemCount from "../../StoreView/ItemCount/ItemCount";
 // REACT-ROUTER-DOM
 import { Link } from "react-router-dom";
+// CONTEXT
+import { SiteContext } from "../../../context/SiteContext";
 // CSS
 import "./ItemDetail.css";
 
@@ -18,6 +20,14 @@ const ItemDetail = ({ data }) => {
     price,
     stock,
   } = data;
+
+  const { setIsInStore, setIsInHome, setSearchImput } = useContext(SiteContext);
+
+  useEffect(() => {
+    setIsInStore(false);
+    setIsInHome(false);
+    setSearchImput("");
+  }, [setIsInStore, setIsInHome, setSearchImput]);
 
   const [amount, setAmount] = useState(0);
 
